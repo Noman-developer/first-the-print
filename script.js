@@ -1,5 +1,5 @@
-// console.log("hello World!");
-// var meassage="Noman"
+console.log("hello World!");
+var meassage="Noman"
 // console.log(meassage)
 // var name="ali"
 // name="haider"
@@ -358,5 +358,211 @@
 //         console.log(inner_variable);
 //     }
 //     hello()
+
+
+// function level or block level scope
+// function hello(){
+//     var a=20;
+//     if(true){
+//         var b=30;
+//         console.log(a,b);
+//     }
+//     console.log(a,b);
+// }
+// // console.log(a,b);
+// hello();
+// function hello(){
+//     let a=20;
+//     if(true){
+//         let b=30;
+//         console.log(a,b);
+//     }
+//     console.log(a,b);
+// }
+// // console.log(a,b);
+// hello();
+
+// default paremeters
+// let defaultpara=(name="Noman",meassage="hello",cast="jutt")=>{
+//     console.log(name + " " + cast);
+// }
+// defaultpara("kalsoom","rajpoot");
+// defaultpara("Alia");
+// defaultpara();
+
+
+// Rest parameters
+// let restPara=(firstBook,secBook,...countings)=>{
+//     console.log(firstBook,secBook);
+//     let total=0;
+//     for(let counting of countings){
+//         total+=counting;
+//     }
+// console.log(total);
+// }
+// restPara("ielts","7 habits of suceesful persons",1,2,3,4,5,6,7,8,9,10)
+
+// parameter destructing
+
+// let paraDes=({name,age,color})=>{
+// console.log(`Name is ${name}`);
+// console.log(`age is ${age}`);
+// console.log(`color is ${color}`);
+// }
+
+// let obj={
+//     name:"Noman",
+//     age:21,
+//     color:"badami"
+// }
+// paraDes(obj);
+
+// function arrDes([first,second,...rest]){
+// console.log(`fist number is ${first}`);
+// console.log(`second number is ${second}`);
+// console.log(`rest  numbers are ${rest}`);
+
+// }
+// let arr=[1,2,3,4,5,6,7,8]
+// arrDes(arr)
+
+
+//callback function(Function passed as an argument)
+// let newFun=(name,callback)=>{
+// console.log("Hello " + name + "!");
+// callback();
+// }
+// function meassage(){
+//     console.log("Good Day");
+// }
+// newFun("Noman",meassage)
+
+//function returning function
+// let outerfun=(factor)=>{
+//     return function innerfun(number){
+//         return factor * number;
+//     }
+// }
+// let innervar=outerfun(5)
+// console.log(innervar(2));
+
+// let outerfunction=(job)=>{
+//     switch(job){
+//         case 'teaching':
+//             return function(name){
+//                 console.log(`the ${name} has teahing passsion `);
+//             }
+//             case 'enginner':
+//             return function(name){
+//                 console.log(`the ${name} has engineering passsion `);
+//             }
+//             case 'freelancer':
+//             return function(name){
+//                 console.log(`the ${name} has freelancing passsion `);
+//             }
+//             default:
+//                 return function(name){
+//                     console.log(`the ${name} has nakama passsion `);
+//                 }
+//     }
+// }
+// outerfunction('freelancer')("Noman")
+
+// foreach method of array 
+// let foreacharray=[2,3,4,5,6,7];
+// foreacharray.forEach(function(number,index,array){
+//     console.log(`In the ${array},at the index ${index} the number is ${number}`);
+// })
+
+// Map function 
+// let randomNumbers=[2,3,5,6,7,8,9,445,3,5,556,753,345,3];
+// let newarr=randomNumbers.map(function(numbers){
+//     // return numbers %2==0;
+//     return numbers **2;
+// })
+// console.log(newarr);
+
+// filter function
+// let randomNumbers=[2,2,2,3,5,6,7,8,9,445,3,5,556,753,345,3];
+// let newarr=randomNumbers.filter(function(numbers){
+//     return numbers %2==0;
+// })
+// console.log(newarr);
+
+// reduce method (returns sigle value from array)
+// let array=[1,1,1,1,1,2]
+// let reduceMethod=array.reduce(function(updatedvalue,currentNumber,inedx,currentarray){
+//     return updatedvalue * currentNumber;
+// },1)
+// console.log(reduceMethod);
+
+// sort function (it will change the origional array)
+// let mixArr=[3,5,7,4,7,9,4,6,9]
+// mixArr.sort(function(a,b){
+//     return b-a
+// })
+// console.log(mixArr);
+
+// find method(find first element who meets the condition)
+// let arr=[1,3,4,5,6,78,6,5,4];
+// let newArr=arr.find(function(number){
+//     return number%2==0;
+// })
+// console.log(newArr);
+
+//Every and some method(rturns boolean)
+// let arr=[1,2,3,4,67,80,7,5,4,,9,0];
+// let everymethod=arr.every(function(inputarr){
+// return 70>=inputarr>=3
+// })
+// console.log(everymethod);
+// let arr2=[1,2,3,4,67,80,7,5,4,,9,0];
+// let everymethod2=arr2.some(function(inputarr){
+// return inputarr>70
+// })
+// console.log(everymethod2);
+
+
+// fill and splice method 
+// let arr=[2,4,467,68,8,55,75,64]
+// arr.fill("ha");
+// console.log(arr);
+
+// let arr2=[2,355,764,3,53,5,3]
+// rem=arr2.splice(1,6)
+// console.log(rem,arr2);
+
+
+// Sets and maps 
+// let sets=new Set([1,2,2,2,3,4,5]);
+// console.log(sets);
+// sets.add(6);
+// console.log(sets);
+// sets.delete(2);
+// console.log(sets);
+// console.log(sets.has(2));
+
+
+// maps 
+// let maps=new Map();
+// console.log(maps);
+// maps.set("2","Noman");
+// console.log(maps);
+// console.log(maps.get('1'));
+// console.log(maps.delete("2"));
+
+// optional chaining
+// let a_obj={
+//     name:"noman",
+//     age:22,
+//     address:{
+//         city:"FSD",
+//         street:4,
+//         House_no:1888
+//     }
+// }
+// let variable=a_obj.address?.city;
+// console.log(variable);
+
 
 
