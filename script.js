@@ -1,7 +1,7 @@
 //JS practice programs
 console.log("hello World!");
 var meassage="Noman"
-// console.log(meassage)
+ console.log(meassage)
 // var name="ali"
 // name="haider"
 // console.log(name);
